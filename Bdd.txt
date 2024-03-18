@@ -46,3 +46,4 @@ CREATE TABLE nelapks.apps(
  	Desarollador varchar(45) not null,
 	Genero varchar(45) not null
 );
+INSERT INTO `admin` (`Cedula`, `Password`, `Nombres`, `Apellidos`, `Foto`) VALUES ('12345678', '1', 'admin', 'admin', 'Fotos/user_icon.png');
