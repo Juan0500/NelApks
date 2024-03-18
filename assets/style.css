@@ -1,0 +1,223 @@
+body{
+    min-height: 100vh;
+    background-color: rgb(237, 241, 246);
+}
+main{
+    min-height: 95vh;
+}
+
+/*BORDES REDONDOS*/
+.bordeR{
+    border-radius:100%;
+}
+
+.mouse_pointer{
+    cursor: pointer;
+}
+
+/*Separadores*/
+.div{
+    background-color: white;
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 10px;
+}
+
+.div .sub_titulo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    color: orangered;   
+}
+
+/* Display inline-block */
+.Dis_inline_block{
+    display: inline-block;
+}
+
+/* No visibles */
+.oculto{
+    display: none;
+}
+
+/*Bordes rojos para pruebas*/
+.bordes_rojos{
+    border: 2px solid red;
+}
+
+/* Estilos para el Header */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 1px 1px 5px black;
+    margin: 0;
+    z-index: 4;
+    background-color: rgba(25, 56, 148, 0.9);
+}
+.header .Contenido_NAV{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* ELIMINAR GAME/APP */
+.btn-delete-app-game{
+    font-size: 25px;
+    display: inline-block;
+    position: fixed;
+    top: 210px;
+    right: 50px;
+    z-index: 20;
+}
+
+
+/* FOTO PERFIL DE USUARIO (Configuraciones y Cerrar Sesión) */
+.Menu_Desplegable_Perfil{
+    display: none;
+    background-color: #ffffff;
+    right: 15px;
+    position: fixed;
+    box-shadow: 1px 1px 3px rgb(148, 146, 146);
+    border-radius: 5px;
+    z-index: 20;
+    transition: 0.5 ease all;
+}
+
+/* FOTO PERFIL SIN LOGIN */
+.Login_or_Register :hover{
+    filter: opacity(70%);
+}
+.Login_or_Register abbr{
+    cursor: pointer;
+}
+
+
+
+/* Estilos para Barra de navegacion */
+.ordenar_barra_navegacion{
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+}
+
+/* Estilos para el Footer */
+footer{
+    margin-top: 40px;
+    background-color: #14404A;
+    box-shadow: -1px -2px 3px black;
+}
+
+/* Estilos iconos de redes sociales */
+.icon-size{
+    font-size: 30px;
+}
+
+/* Carrusel Principal */
+#carouselId{
+    margin: 0 100px;
+    text-align: center;
+}
+
+.carousel-item h3, p{
+   max-width: 80%;
+   text-align: left;
+   margin: auto;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.carousel-item h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 20px;
+}
+.btn-prev, .btn-next{
+   position: static;
+   margin: 0 20px;
+   margin-top: 15px;
+   display: inline-block;
+   padding: 10px;
+}
+
+/* Boton para Administrador */
+.btn-flotante-admin{
+    font-size: 50px;
+    margin: 0s;
+    border-radius: 15px;
+    position: fixed;
+    right: 55px;
+    top: 105px;
+    z-index: 2;
+    background-color:rgb(0,0,0,.3);
+}
+.btn-flotante-admin :hover{
+    cursor: pointer;
+}
+.fa-plus :hover{
+    color: blue;
+    cursor: pointer;
+}
+
+/* Juegos por Genero */
+.FilaGenero{
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+/*MODAL*/
+.modal-dialog {
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+.modal-content {
+width: 100vw;
+height: auto;
+min-height: 100%;
+border-radius: 0;
+}
+
+/* Pantallas de Celulares */
+@media screen and (max-width:800px) {
+    .header{
+        text-align: center;
+    }
+    #carouselId{
+        margin: 0;
+    }
+    .iframe_trailer{
+        width: 100%;
+        height: 450px;
+    }
+    #DIV_BTNS_NEXT_PREV_CARRUSEL{
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-next, .btn-prev{
+        width: 50%;
+        margin-top: 40px;
+
+    }
+    #Detalles{
+        max-width: 100%;
+    }
+    .Info_Ad_Game{
+        margin-left: 0!important;
+        font-size: 14px;
+    }
+    .EnTer{
+        display: none;
+    }
+    .ContComent{
+        text-align: center;
+        box-shadow: 1px 1px 10px rgb(0,0,0,.3);
+        border-radius: 10px;
+    }
+    .div_estrellas{
+        padding: 0!important;
+    }
+    .DiVComent{
+        padding-bottom: 40px;
+    }
+    .bor{
+        margin-top: 110px!important;
+    }
+}

@@ -1,0 +1,48 @@
+CREATE DATABASE nelapks;
+CREATE TABLE nelapks.admin(
+	Cedula int PRIMARY KEY AUTO_INCREMENT,
+	Password varchar(45) not null,
+ 	Nombres varchar(45) not null,
+    Apellidos varchar(45) not null,
+    Foto varchar(45) not null
+);
+CREATE TABLE nelapks.usuarios(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+ 	Nombres varchar(45) not null,
+    Apellidos varchar(45) not null,
+ 	Password varchar(45) not null,
+    Correo varchar(45) not null,
+    Foto varchar(45) not null
+);
+CREATE TABLE nelapks.generos(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+ 	Nombre varchar(45) not null
+);
+CREATE TABLE nelapks.likes(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+ 	IDUsuarios int not null,
+    IDComentario int not null
+);
+CREATE TABLE nelapks.comentarios(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+ 	IDUsuario int not null,
+    IDApp int not null,
+    Comentario varchar(500) not null,
+    Fecha datetime not null,
+    Estrellas varchar(45) not null
+);
+CREATE TABLE nelapks.apps(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+ 	Tipo varchar(45) not null,
+    Nombre varchar(45) not null,
+    Icono varchar(200) not null,
+    Poster varchar(200) not null,
+    Detalles varchar(500) not null,
+    apk varchar(200) not null,
+    URL varchar(200) not null,
+ 	Version varchar(45) not null,
+ 	Actualizacion varchar(45) not null,
+ 	Requisitos varchar(45) not null,
+ 	Desarollador varchar(45) not null,
+	Genero varchar(45) not null
+);
