@@ -25,7 +25,7 @@ Jugar -> http://nelapks.fast-page.org
 
 ![App Screenshot](screenshots/4.png)
 
-![App Screenshot](screenshots/image5.png)
+![App Screenshot](screenshots/5.png)
 
 Más capturas en la carpeta "screenshots";
 
