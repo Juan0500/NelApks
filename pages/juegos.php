@@ -135,23 +135,27 @@
             
             <?php
       }
+      else {
+        echo "<div class='alert alert-info text-center p-4'><h4>No hay Juegos Guardados :(</h4></div>";
+      }
       
       ?>
            
 
       <div class="container ContXCategoria mt-5 div">
         <div class="row">
-          <div class="col-12 mt-4">
-            <hr>
-            <label class="h2 sub_titulo ml-5"> Categorias </label>
-            <hr>
-          </div>
+        <div class="col-12 mt-4">
+                <hr>
+                <label class="h2 sub_titulo ml-5"> Categorias </label>
+                <hr>
+              </div>
         </div>
       <!-- CONTENIDOS POR CATEGORIA -->
         <?php
         $sql="SELECT * FROM generos";
         $res=mysqli_query($conn,$sql);
-        if ($res) {
+        $num_rows = mysqli_num_rows($res);
+        if ($res && $num_rows > 0) {
           while ($row = mysqli_fetch_assoc($res)) {
             $IDGenero = $row['ID'];
             $NombreGenero = $row['Nombre'];
@@ -159,7 +163,9 @@
             $sql2="SELECT * FROM apps WHERE Tipo='Juego' AND Genero=$IDGenero ORDER BY RAND() LIMIT 12";
             $res2=mysqli_query($conn,$sql2);
             if ($res2 && mysqli_affected_rows($conn) > 0) {
+
               ?>
+               
               <div class="div" style="display:flex;justify-content:space-between;">
                 <label class="ml-3 mt-2 h5 sub_titulo Genero_<?php echo $IDGenero ?>"> Juegos de <?php echo $NombreGenero ?>  </label> <a href="Search.php?tipo=<?php echo base64_encode('j'); ?>&g=<?php echo base64_encode($NombreGenero) ?>&idg=<?php echo base64_encode($IDGenero) ?>" class="h5 btn sub_titulo"> VER MÁS <i class="fa-solid fa-angles-right"></i> </a>
               </div>
@@ -190,6 +196,13 @@
               <?php
             }
           }
+        }
+        else {
+          ?>
+          <div class="col-12 alert alert-danger">
+            NO hay generos guarados!
+          </div>
+          <?php
         }
         ?>
       <!----------------------->
