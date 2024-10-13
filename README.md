@@ -17,13 +17,13 @@ Descarga con confianza, explora y disfruta de todo lo que NelApks tiene para ofr
 Jugar -> http://nelapks.fast-page.org
 ## Screenshots
 
-![App Screenshot](screenshots/image1.png)
+![App Screenshot](screenshots/1.png)
 
-![App Screenshot](screenshots/image2.png)
+![App Screenshot](screenshots/2.png)
 
-![App Screenshot](screenshots/image3.png)
+![App Screenshot](screenshots/3.png)
 
-![App Screenshot](screenshots/image4.png)
+![App Screenshot](screenshots/4.png)
 
 ![App Screenshot](screenshots/image5.png)
 
